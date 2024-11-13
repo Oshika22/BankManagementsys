@@ -2,12 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Bank Management System</title>
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}"> -->
 </head>
 <body>
-    <div>
-        hey!!!!!!!
-    </div>
+    <h1>Welcome to Bank Management System</h1>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('create_bank') }}">Create Bank</a></li>
+            <!-- <li><a href="{{ url_for('create_bank') }}">Create Account</a></li> -->
+
+            <!-- Add links to other sections -->
+        </ul>
+    </nav>
 </body>
 </html>

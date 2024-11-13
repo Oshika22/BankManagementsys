@@ -1,6 +1,8 @@
-from flask import Flask, render_template, jsonify 
+from flask import Flask, render_template, jsonify, request, redirect, url_for, flash
 from flask_mysqldb import MySQL
 from config import Config
+from models.Bank import Bank
+
 # from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -21,6 +23,9 @@ def create_bank():
         flash("Bank created successfully!", "success")
         return redirect(url_for('index'))
     return render_template('create_bank.html')
+def create_account():
+    # your logic here
+    return render_template('create_account.html')
 
 @app.route('/view_bank/<int:code>')
 def view_bank(code):

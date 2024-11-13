@@ -1,0 +1,9 @@
+<form action="{{ url_for('create_bank') }}" method="POST">
+    <label>Bank Name:</label>
+    <input type="text" name="name" required><br>
+    <label>City:</label>
+    <input type="text" name="city" required><br>
+    <label>Address:</label>
+    <input type="text" name="address" required><br>
+    <button type="submit">Create Bank</button>
+</form>
