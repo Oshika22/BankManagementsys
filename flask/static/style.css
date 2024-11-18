@@ -1,0 +1,275 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background-color: #e4edf7; */
+    color: rgb(0, 11, 53);
+    background-color: lavender;
+}
+a {
+    text-decoration: none;  
+    color: inherit;     
+    margin: 0;             
+    padding: 0;            
+    outline: none;        
+}
+h1{
+    font-size: 45px;
+    margin: 10px;
+}
+/* ------------------welcome Page------------------------------------- */
+.welcome-page{
+    /* background: url(images/bank_bg.png); */
+    background-color: lightblue;
+    height: 100vh;
+    width: 100vw;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.tagline{
+    font-family: 'Roboto', sans-serif;
+}
+.welcome-img{
+    height: 400px;
+    width: 400px;
+    background: url(images/bank_bg_2_copy.png);
+    background-size: cover;
+    position: fixed;
+    bottom: 0%;
+    right: 0%;
+}
+/* --------------------login option------------------------------------ */
+.login-page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container{
+    height: 200px;
+    width: 300px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    border: 2px ridge rgb(0, 8, 32);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    font-size: 18px;
+}
+/*------------------------emp-login------------------------------------*/
+.emp-login-page{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.emp-form{
+    height: 200px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    gap: 3px;
+}
+/* ------------------Employee Dashboard style------------------------- */
+.icons-container{
+    height: 400px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.form-link-btn{
+    height: 150px;
+    width: 150px;
+    padding: 10px;
+    /* background-color: #1565C0 ; */
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* color: #fbcf2f;  */
+    color:rgb(0, 11, 53);
+    border-radius: 20px;
+    border: 2px solid aliceblue;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    transition: all 0.3s ease;
+}
+.form-link-btn:hover{
+    scale: 1.05;
+    transform: translateY(-5px);
+}
+.form-btn-cont{
+    height: 140px;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.dash-icon{
+    height: 100px;
+    width: 70px;
+    font-size: 70px;
+}
+.form-name{
+    font-size: 20px;
+}
+
+/* ----------------------form styling ---------------*/
+.main-cont{
+    width: 95vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 2vw;
+    overflow: hidden;
+    background: conic-gradient(from 0deg, #5f92ff, #7bb6fe, #5f8cff);
+}
+.form-container{
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(230, 230, 250, 0.87);
+    border: 2px solid rgb(231, 228, 228);
+    /* box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.609);
+    border-radius: 5px;
+    overflow: hidden;
+    /* margin-top: 15px; */
+    padding: 15px;
+
+}
+.form{
+    width: 60vw;
+    margin: 15px;
+    font-size: 18px;
+}
+.input{
+    width: 70%;
+    margin: 15px 0;
+    /* padding: 10px 3px; */
+    background: transparent;
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid rgb(16, 1, 42); 
+}
+.sub-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.submit-btn{
+    height: 40px;
+    width: 150px;
+    outline: none;
+    border: 0;
+    border-radius: 10px;
+    font-size: 18px;
+    color: aliceblue;
+    background-color: rgb(0, 11, 53);
+    border: 2px solid aliceblue;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* transition: all 0.3s ease; */
+}
+.submit-btn:hover{
+    background: linear-gradient(to bottom right, rgb(0, 11, 53), rgb(0, 146, 195));
+    scale: 1.02;
+    /* transform: translateY(-2px); */
+}
+/* --------------------search table style---------------------------- */
+.display-container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    color: rgb(0, 11, 53);
+}
+.table{
+    background-color: aliceblue;
+    margin: 10px;
+    font-size: 18px;
+}
+.table-row{
+    background-color: lightblue;
+}
+.table-head{
+    background-color: rgb(146, 215, 238);
+}
+.table-block{
+    padding: 5px;
+    margin: 2px;
+}
+
+.Search-container{
+    margin: 10px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid aliceblue;
+    border-radius: 10px;
+    color: rgb(0, 11, 53);
+}
+
+.search-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-title{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: lightblue;
+    padding: 5px;
+    font-size: 16px;
+    width: 25px;
+}
+.search-icon{
+    font-size: 18px;
+}
+.search-input{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background: rgb(205, 227, 246);
+    outline: none;
+    border: 0;
+    padding: 5px;
+    height: 21px;
+    font-size: 16px;
+}
+.search-btn{
+    height: 31px;
+    width: 35px;
+    outline: none;
+    border: 0;
+    background-color: lightblue;
+    font-size: 16px;
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}

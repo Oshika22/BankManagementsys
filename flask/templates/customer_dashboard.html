@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+</head>
+<body>
+    <h1>Welcome, {{ customer.f_name or 'Guest' }} {{ customer.l_name or '' }}</h1>
+    <div>
+        {% if session.get('loggedin') %}
+            <a href="{{ url_for('loan') }}">Loan</a>
+            <a href="{{ url_for('login') }}">Transaction</a>
+            <a href="{{ url_for('login') }}">Payment History</a>
+            <a href="{{ url_for('login') }}">Logout</a>
+        {% else %}
+            <p>Please <a href="{{ url_for('customer_login') }}">log in</a> to access your account.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

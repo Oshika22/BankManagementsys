@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Customer Login Form -->
+    <!-- <form action="/customer_login" method="POST" id="customerForm">
+        <h3>Customer Login</h3>
+        <input type="text" id="customerUsername" name="customerUsername" placeholder="Customer ID" required>
+        <input type="password" id="customerPassword" name="password" placeholder="Password" required>
+        <input type="submit" value="Login">
+    </form> -->
+    <form method="POST" action="{{ url_for('customer_login') }}">
+        <label for="customerUsername">Customer ID:</label>
+        <input type="text" name="customerUsername" required>
+        <button type="submit">Login</button>
+    </form>
+    <a href="{{ url_for('customer_dashboard') }}">customer_dashboard</a>
+</body>
+</html>
+        

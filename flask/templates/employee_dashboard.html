@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Dashbard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="emp_details">
+        <h1 >Welcome, {{ employee.emp_name or 'Guest' }}</h1>
+    </div>
+
+    <div class="icons-container">
+        {% if session.get('loggedin') %}
+            <a href="{{ url_for('create_cust') }}" class="form-link-btn">
+                <div class="form-btn-cont">
+                    <i class="fa-brands fa-creative-commons-by dash-icon"></i>
+                    <div class="form-name">Create account</div>
+                </div>
+            </a>
+            <a href="{{ url_for('update_cust') }}" class="form-link-btn">
+                <div class="form-btn-cont">
+                    <i class="fa-regular fa-pen-to-square dash-icon"></i>
+                    <div class="form-name">Update account</div>
+                </div>
+            </a>
+            <a href="{{ url_for('search_cust') }}" class="form-link-btn">
+                <div class="form-btn-cont">
+                    <i class="fa-solid fa-magnifying-glass dash-icon"></i>
+                    <div class="form-name">Search account</div>
+                </div>
+            </a>
+            <a href="{{ url_for('delete_cust') }}" class="form-link-btn">
+                <div class="form-btn-cont">
+                    <i class="fa-solid fa-trash dash-icon"></i>
+                    <div class="form-name">Delete account</div>
+                </div>
+                
+            </a>
+
+            <a href="{{ url_for('login') }}" class="form-link-btn">
+                <div>
+                    <i class="fa-solid fa-arrow-right dash-icon"></i>
+                    <div class="form-name">LogOut</div>
+                </div>
+            </a>
+        {% else %}
+            <p>Please <a href="{{ url_for('employee_login') }}">log in</a> to access your account.</p>
+        {% endif %}
+    </div>
+</body>
+</html>

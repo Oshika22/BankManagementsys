@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search customer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="display-container">
+        <h1>Customer Details</h1>
+        <!-- Search Form -->
+        <div class="Search-container">
+            <form method="POST" class="search-form">            
+                <div class="search-box">
+                    <!-- <label for="customer_id" class="search-title"><i class="fa-solid fa-magnifying-glass search-icon"></i></label> -->
+                    <input type="text" id="customer_id" name="customer_id" required class="search-input" placeholder="Enter Customer ID">
+                    <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass search-icon"></i></button>
+                </div>
+            </form>
+        </div>
+        <table class="table">
+            <thead class="table-head">
+                <tr>
+                    <th class="table-block">ID</th>
+                    <th class="table-block">First Name</th>
+                    <th class="table-block">Last Name</th>
+                    <th class="table-block">Phone</th>
+                    <th class="table-block">Address</th>
+                    <th class="table-block">Account No</th>
+                    <th class="table-block">Balance</th>
+                </tr>
+            </thead>
+            <tbody>  
+                {% if customer %}
+                    {% for row in customer %}
+                    <tr class="table-row">
+                        <td class="table-block">{{ row.customer_id }}</td>
+                        <td class="table-block">{{ row.f_name }}</td>
+                        <td class="table-block">{{ row.l_name }}</td>
+                        <td class="table-block">{{ row.mobile_no }}</td>
+                        <td class="table-block">{{ row.address }}</td>
+                        <td class="table-block">{{ row.account_no }}</td>    
+                        <td class="table-block">{{ row.balance }}</td>   
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td colspan="5" style="text-align: center;">No data found.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
