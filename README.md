@@ -136,9 +136,6 @@ def login():
 ## Contributing
 Contributions are welcome! Please fork the repository and submit a pull request.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
-
 ## Acknowledgments
 - Developed by Oshika Sharma And Pranjali Yeotikar
 - Frameworks and libraries: Flask, `flask_mysqldb`, `MySQLdb.cursors`
